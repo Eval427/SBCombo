@@ -1,0 +1,18 @@
+
+[display]
+
+	[display.display_settings]
+		delete_combo_chat_messages = true
+		enable_funny_pp_combo_tracker = false
+		combo_text_mode = 0
+		show_combo_text = true
+
+[combo_tracker]
+
+	[combo_tracker.best_combo_tracker]
+		hide_expired_combo_message = true
+		track_best_combo = true
+
+	[combo_tracker.display]
+		enable_funny_pp_combo_tracker = false
+
