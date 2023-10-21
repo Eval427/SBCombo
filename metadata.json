@@ -1,7 +1,7 @@
 {
     "$schema": "../CTAutocomplete/schema.json",
     "name": "SBCombo",
-    "author": "Blak_Dude, Debug, MPG1, and Altpapier",
+    "author": "Eval, Debug, MPG1, and Altpapier",
     "entry": "main.js",
     "version": "2.2.0",
     "description": "&6Moves the ugly chat messages for combos to a nice display.",
