@@ -30,15 +30,6 @@ register('chat', (combo, num, type, event) => { //Combos b/w 5-30
     cancel(event);
   }
 
-  if (Settings.showPP) {
-    ppText = "8"
-    for (let i = 0; i < Number(combo) / 5; i++) {
-    ppText += "="
-    }
-    ppText += "D"
-  }
-}).setCriteria("+${combo} Kill Combo +${num} ${type}");
-
 register('chat', (combo, event) => { //Combos 30+
   if (Settings.showText) {
     if (Settings.mode === 0) {
@@ -114,17 +105,6 @@ register('renderOverlay', () => {
           Renderer.drawStringWithShadow(displayTextList[i], savedStates.coords[0], savedStates.coords[1] + (10 * i))
         }
       }
-    }
-  }
-
-  if (Settings.showPP) {
-    if (movePP.isOpen()) {
-      Renderer.drawStringWithShadow("8=====D", savedStates.ppCoords[0], savedStates.ppCoords[1]);
-      Renderer.drawLine(Renderer.WHITE, savedStates.ppCoords[0], 1, savedStates.ppCoords[0], Renderer.screen.getHeight(), 0.5);
-      Renderer.drawLine(Renderer.WHITE, Renderer.screen.getWidth(), savedStates.ppCoords[1], 1, savedStates.ppCoords[1], 0.5);
-      Renderer.drawStringWithShadow(`x: ${Math.round(savedStates.ppCoords[0])}, y: ${Math.round(savedStates.ppCoords[1])}`, parseInt(savedStates.ppCoords[0]) - 65, parseInt(savedStates.ppCoords[1]) - 12)
-    } else {
-      Renderer.drawStringWithShadow(ppText, savedStates.ppCoords[0], savedStates.ppCoords[1]);
     }
   }
 });
